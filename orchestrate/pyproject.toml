@@ -3,5 +3,5 @@ requires = ["setuptools"]
 build-backend = "setuptools.build_meta"
 
 [tool.dagster]
-module_name = "orchestrate.definitions"
-code_location_name = "orchestrate"
+module_name = "elt.definitions"
+code_location_name = "elt"

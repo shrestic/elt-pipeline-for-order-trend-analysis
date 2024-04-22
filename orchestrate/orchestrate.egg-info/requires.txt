@@ -1,7 +1,0 @@
-dagster
-dagster-cloud
-dagster-dbt
-dbt-snowflake
-
-[dev]
-dagster-webserver
