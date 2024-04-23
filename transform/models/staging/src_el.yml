@@ -1,0 +1,12 @@
+version: 2
+
+sources:
+  - name: store
+    description: Data from database, brought in by an EL process.
+    tables:
+      - name: customers
+        columns:
+        - name: customer_id
+          tests:
+            - not_null
+

@@ -9,6 +9,8 @@ setup(
         "dagster-cloud",
         "dagster-dbt",
         "dbt-snowflake",
+        "dagster-postgres",
+        "psycopg2"
     ],
     extras_require={
         "dev": [

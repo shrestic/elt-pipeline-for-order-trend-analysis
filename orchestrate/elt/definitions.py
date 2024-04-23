@@ -1,16 +1,13 @@
-import os
-
 from dagster import Definitions
-from dagster_dbt import DbtCliResource
-
-from .assets.dbt import transform_dbt_assets
-from .utils.constants import dbt_project_dir
-from .schedules.schedules import schedules
+from .jobs import extract_load_job
+from .schedules import schedules
+from .resources import dbt_resource, snowflake_resource
 
 defs = Definitions(
-    assets=[transform_dbt_assets],
+    jobs=[extract_load_job],
     schedules=schedules,
     resources={
-        "dbt": DbtCliResource(project_dir=os.fspath(dbt_project_dir)),
+        "dbt": dbt_resource,
+        "snowflake": snowflake_resource
     },
 )
