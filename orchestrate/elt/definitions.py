@@ -1,10 +1,10 @@
 from dagster import Definitions
-from .jobs import extract_load_job
+from .assets import transform_data_assets, extract_load_data, raw_data_source
 from .schedules import schedules
 from .resources import dbt_resource, snowflake_resource
 
 defs = Definitions(
-    jobs=[extract_load_job],
+    assets=[extract_load_data, transform_data_assets, raw_data_source],
     schedules=schedules,
     resources={
         "dbt": dbt_resource,

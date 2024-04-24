@@ -2,11 +2,53 @@ version: 2
 
 sources:
   - name: store
-    description: Data from database, brought in by an EL process.
+    schema: 'raw'
     tables:
-      - name: customers
+      - name: raw_customers
+        meta:
+          dagster:
+            asset_key: ["raw_customers"]
         columns:
-        - name: customer_id
-          tests:
-            - not_null
+          - name: customer_id
+            tests: ['unique', 'not_null']
+      - name: raw_geolocation
+        meta:
+          dagster:
+            asset_key: ["raw_geolocation"]        
+      - name: raw_orders
+        meta:
+          dagster:
+            asset_key: ["raw_orders"]        
+        columns:
+          - name: order_id
+            tests: ['unique', 'not_null']
+      - name: raw_order_items
+        meta:
+          dagster:
+            asset_key: ["raw_order_items"]       
+        columns:
+          - name: order_id
+            tests: ['unique', 'not_null']
+      - name: raw_order_payments
+        meta:
+          dagster:
+            asset_key: ["raw_order_payments"] 
+        columns:
+          - name: order_id
+            tests: ['unique', 'not_null']
+      - name: raw_products
+        meta:
+          dagster:
+            asset_key: ["raw_products"] 
+        columns:
+          - name: product_id
+            tests: ['unique', 'not_null']
+      - name: raw_sellers
+        meta:
+          dagster:
+            asset_key: ["raw_sellers"] 
+        columns:
+          - name: seller_id
+            tests: ['unique', 'not_null']
+
 
