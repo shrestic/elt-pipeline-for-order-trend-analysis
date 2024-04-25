@@ -3,42 +3,42 @@ version: 2
 models:
   - name: stg_customers
     columns:
-      - name: customer_id
+      - name: customer_id_key
         tests:
           - not_null
           - unique
   - name: stg_orders
     columns:
-      - name: order_id
+      - name: order_id_key
         tests:
           - not_null
           - unique
   - name: stg_geolocation
     columns:
-      - name: geolocation_zip_code_prefix
+      - name: geolocation_zip_code_prefix_key
         tests:
           - not_null
   - name: stg_sellers
     columns:
-      - name: seller_id
+      - name: seller_id_key
         tests:
           - not_null
           - unique
   - name: stg_order_payments
     columns:
-      - name: order_id
+      - name: order_id_key
         tests:
           - not_null
           - unique
   - name: stg_order_items
     columns:
-      - name: order_id
+      - name: order_id_key
         tests:
           - not_null
           - unique
   - name: stg_products
     columns:
-      - name: product_id
+      - name: product_id_key
         tests:
           - not_null
           - unique

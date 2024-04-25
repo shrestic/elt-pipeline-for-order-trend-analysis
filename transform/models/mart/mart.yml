@@ -1,0 +1,24 @@
+version: 2
+
+models:
+  - name: dim_customers
+    columns:
+      - name: customer_id_key
+        tests:
+          - not_null
+  - name: dim_orders
+    columns:
+      - name: order_id_key
+        tests:
+          - not_null
+  - name: dim_products
+    columns:
+      - name: product_id_key
+        tests:
+          - not_null
+  - name: dim_sellers
+    columns:
+      - name: seller_id_key
+        tests:
+          - not_null
+  - name: fct_sales

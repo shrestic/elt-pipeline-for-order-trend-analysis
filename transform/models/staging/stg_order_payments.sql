@@ -4,7 +4,7 @@ with source as (
 ),
 order_payments as (
     select
-        {{ remove_double_quote('order_id') }} as order_id,
+        {{ remove_double_quote('order_id') }} as order_id_key,
         payment_sequential :: int as payment_sequential, 
         payment_type, 
         payment_installments :: int as payment_installments, 
@@ -16,16 +16,16 @@ order_payments as (
     from source
 )
 select 
-    order_id, 
+    order_id_key, 
     payment_sequential, 
     payment_type, 
     payment_installments, 
     payment_value
 from order_payments
-where (order_id, rw_num) in (
+where (order_id_key, rw_num) in (
         select 
-        order_id,
+        order_id_key,
         min(rw_num)
         from order_payments
-        group by order_id
+        group by order_id_key
     ) 

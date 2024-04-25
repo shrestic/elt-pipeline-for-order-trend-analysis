@@ -4,7 +4,7 @@ with source as (
 ),
 products as (
     select  
-        {{ remove_double_quote('product_id') }} as product_id,
+        {{ remove_double_quote('product_id') }} as product_id_key,
         product_category_name, 
         product_name_lenght :: int as product_name_length, 
         product_description_lenght :: int as product_description_length, 
@@ -20,7 +20,7 @@ products as (
     from source
 )
 select 
-    product_id, 
+    product_id_key, 
     product_category_name, 
     product_name_length, 
     product_description_length, 
@@ -30,10 +30,10 @@ select
     product_height, 
     product_width
 from products
-where (product_id, rw_num) in
+where (product_id_key, rw_num) in
 (   select
-        product_id, 
+        product_id_key, 
         min(rw_num) 
     from products
-    group by product_id
+    group by product_id_key
 )
