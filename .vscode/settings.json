@@ -3,6 +3,7 @@
         "creds",
         "dagster",
         "fspath",
+        "geolocation",
         "nguyenphong",
         "psycopg"
     ]

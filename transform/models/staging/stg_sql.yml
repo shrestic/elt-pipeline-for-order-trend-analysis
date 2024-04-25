@@ -1,0 +1,44 @@
+version: 2
+
+models:
+  - name: stg_customers
+    columns:
+      - name: customer_id
+        tests:
+          - not_null
+          - unique
+  - name: stg_orders
+    columns:
+      - name: order_id
+        tests:
+          - not_null
+          - unique
+  - name: stg_geolocation
+    columns:
+      - name: geolocation_zip_code_prefix
+        tests:
+          - not_null
+  - name: stg_sellers
+    columns:
+      - name: seller_id
+        tests:
+          - not_null
+          - unique
+  - name: stg_order_payments
+    columns:
+      - name: order_id
+        tests:
+          - not_null
+          - unique
+  - name: stg_order_items
+    columns:
+      - name: order_id
+        tests:
+          - not_null
+          - unique
+  - name: stg_products
+    columns:
+      - name: product_id
+        tests:
+          - not_null
+          - unique

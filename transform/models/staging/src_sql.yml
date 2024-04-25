@@ -10,7 +10,7 @@ sources:
             asset_key: ["raw_customers"]
         columns:
           - name: customer_id
-            tests: ['unique', 'not_null']
+            tests: ['not_null']
       - name: raw_geolocation
         meta:
           dagster:
@@ -21,34 +21,34 @@ sources:
             asset_key: ["raw_orders"]        
         columns:
           - name: order_id
-            tests: ['unique', 'not_null']
+            tests: ['not_null']
       - name: raw_order_items
         meta:
           dagster:
             asset_key: ["raw_order_items"]       
         columns:
           - name: order_id
-            tests: ['unique', 'not_null']
+            tests: ['not_null']
       - name: raw_order_payments
         meta:
           dagster:
             asset_key: ["raw_order_payments"] 
         columns:
           - name: order_id
-            tests: ['unique', 'not_null']
+            tests: ['not_null']
       - name: raw_products
         meta:
           dagster:
             asset_key: ["raw_products"] 
         columns:
           - name: product_id
-            tests: ['unique', 'not_null']
+            tests: ['not_null']
       - name: raw_sellers
         meta:
           dagster:
             asset_key: ["raw_sellers"] 
         columns:
           - name: seller_id
-            tests: ['unique', 'not_null']
+            tests: ['not_null']
 
 
