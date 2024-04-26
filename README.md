@@ -8,8 +8,12 @@ The project builds an ELT pipeline to collect e-commerce data from different dat
 ![elt_pipeline](https://github.com/shrestic/e_commerce_elt_pipeline/assets/60643737/1b0d85ba-1cb4-401b-b2c1-d19324ac0a63)
 
 ## Visualize
+<h2 align="center">Sales Performance Analysis by Order Date</h2>
+<p align="center">
+<img width="706" alt="image" src="https://github.com/shrestic/e_commerce_elt_pipeline/assets/60643737/1739e325-b985-4b60-a1ca-bcc223ae0bcb">
+</p>
 
-<img width="908" alt="image" src="https://github.com/shrestic/e_commerce_elt_pipeline/assets/60643737/6682d648-4b20-4055-8d1c-97c9612b3dba">
+
 
 
 
