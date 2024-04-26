@@ -37,3 +37,5 @@ models:
       +materialized: view
     mart:
       +materialized: table
+    advanced_analytics:
+      +materialized: table
